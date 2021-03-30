@@ -70,13 +70,19 @@
         <div class="div-block-5">
           <h1 class="heading-11">CONTACT US</h1>
           <div class="form-block w-form">
-            <form id="email-form" name="email-form" data-name="Email Form"><input type="text" class="w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your Name" id="name" required=""><input type="email" class="w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="Enter your phone number" id="Phone" required=""><textarea placeholder="Write your query" maxlength="5000" id="Query" name="Query" data-name="Query" required="" class="w-input"></textarea><input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button"></form>
-            <div class="w-form-done">
-              <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail">
-              <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
+            {% if messages %}
+            <ul class="messages">
+              {% for message in messages %}
+              <li style="background-color:white;color:green;">{{ message }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="{% url 'ContactUs' %}" method="post" id="email-form" name="email-form" data-name="Email Form">
+              <input type="text" class="w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your Name" id="name" required="">
+              <input type="email" class="w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="Enter your phone number" id="Phone" required="">
+              <textarea placeholder="Write your query" maxlength="5000" id="Query" name="Query" data-name="Query" required="" class="w-input"></textarea>
+              <input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button">
+            </form>
           </div>
         </div>
       </div>
