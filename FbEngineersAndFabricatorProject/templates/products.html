@@ -22,7 +22,9 @@
 <body>
   <div class="section-2">
     <div class="w-row">
-      <div class="w-col w-col-6 w-col-small-6"><img src="images/FbEngineersFabricator.png" loading="lazy" width="246" data-w-id="bb380dc2-ba50-6cac-0059-e5797144a4c1" srcset="images/FbEngineersFabricator-p-500.png 500w, images/FbEngineersFabricator-p-800.png 800w, images/FbEngineersFabricator-p-1080.png 1080w, images/FbEngineersFabricator-p-1600.png 1600w, images/FbEngineersFabricator-p-2000.png 2000w, images/FbEngineersFabricator-p-2600.png 2600w, images/FbEngineersFabricator.png 3000w" sizes="(max-width: 479px) 92vw, (max-width: 767px) 46vw, 246px" alt="" class="image-5"></div>
+      <div class="w-col w-col-6 w-col-small-6">
+        <img src="{% static 'images/FbEngineerFabricator.png' %}" loading="lazy" width="246" data-w-id="bb380dc2-ba50-6cac-0059-e5797144a4c1"  sizes="(max-width: 479px) 92vw, (max-width: 767px) 46vw, 246px" alt="" class="image-5">
+      </div>
       <div class="column-5 w-col w-col-6 w-col-small-6">
         <div class="text-block-10"><strong class="bold-text-4">FOR QUICK ENQUIRY?</strong></div>
         <div class="mobilenumber"><span><strong class="mobicon"></strong></span><strong class="mobtext"> +91-8818040140</strong></div>
@@ -40,22 +42,22 @@
     <nav class="container-5 w-container">
       <div class="navbarmenu w-row">
         <div class="menucolumns w-col w-col-3 w-col-stack">
-          <a href="index.html" class="link-block w-inline-block">
+          <a href="{% url 'index' %}" aria-current="page" class="link-block w-inline-block w--current">
             <div><strong>HOME</strong></div>
           </a>
         </div>
         <div class="menucolumns w-col w-col-3 w-col-stack">
-          <a href="aboutus.html" class="link-block w-inline-block">
+          <a href="{% url 'AboutUs' %}" class="link-block w-inline-block">
             <div><strong>ABOUT US</strong></div>
           </a>
         </div>
         <div class="menucolumns w-col w-col-3 w-col-stack">
-          <a href="products.html" aria-current="page" class="link-block w-inline-block w--current">
+          <a href="{% url 'Products' %}" class="link-block w-inline-block">
             <div><strong>PRODUCTS &amp; SERVICES</strong></div>
           </a>
         </div>
         <div class="menucolumns w-col w-col-3 w-col-stack">
-          <a href="contactus.html" class="link-block w-inline-block">
+          <a href="{% url 'ContactUs' %}" class="link-block w-inline-block">
             <div><strong>CONTACT US</strong></div>
           </a>
         </div>
