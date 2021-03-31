@@ -619,15 +619,15 @@
     <div class="w-container">
       <div class="footer-flex-container-2">
         <div class="w-row">
-          <div class="w-col w-col-4"><img src="images/FbEngineerFabricator.png" loading="lazy" sizes="(max-width: 479px) 87vw, (max-width: 767px) 92vw, (max-width: 991px) 229.328125px, 299.984375px" srcset="images/FbEngineerFabricator-p-500.png 500w, images/FbEngineerFabricator-p-800.png 800w, images/FbEngineerFabricator-p-1080.png 1080w, images/FbEngineerFabricator-p-1600.png 1600w, images/FbEngineerFabricator-p-2000.png 2000w, images/FbEngineerFabricator-p-2600.png 2600w, images/FbEngineerFabricator.png 3000w" alt="" class="image-8"></div>
+          <div class="w-col w-col-4"><img src="{% static 'images/FbEngineerFabricator.png' %}" loading="lazy" sizes="(max-width: 479px) 87vw, (max-width: 767px) 92vw, (max-width: 991px) 229.328125px, 299.984375px"  alt="" class="image-8"></div>
           <div class="column-6 w-col w-col-4">
             <div>
               <h4 class="heading-24">USEFUL LINKS</h4>
             </div>
-            <div class="text-block-21">HOME</div>
-            <div class="text-block-21">ABOUT US</div>
-            <div class="text-block-21">PRODUCTS &amp; SERVICES</div>
-            <div class="text-block-21">CONTACT US</div>
+            <a href="{% url 'index' %}" style="text-decoration:none;color:white;"><div class="text-block-21">HOME</div></a>
+            <a href="{% url 'AboutUs' %}" style="text-decoration:none;color:white;"><div class="text-block-21">ABOUT US</div></a>
+            <a href="{% url 'Products' %}" style="text-decoration:none;color:white;"><div class="text-block-21">PRODUCTS &amp; SERVICES</div></a>
+            <a href="{% url 'ContactUs' %}" style="text-decoration:none;color:white;"><div class="text-block-21">CONTACT US</div></a>
           </div>
           <div class="column-7 w-col w-col-4">
             <h4 class="heading-25">ADDRESS</h4>
